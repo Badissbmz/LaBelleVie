@@ -1,0 +1,27 @@
+/* styles.css */
+
+/* Style par défaut du bouton */
+.button {
+    -fx-background-color: pink;
+    -fx-text-fill: #007cb2; /* Bleu foncé */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 8px; /* Bords arrondis */
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent; /* Pas de bordure */
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+/* Effet au survol */
+.button:hover {
+    -fx-background-color: #007cb2;
+      -fx-text-fill: white;/* Rose plus clair */
+}
+
+/* Effet au clic */
+.button:pressed {
+    -fx-background-color: white; /* Bleu turquoise */
+    -fx-text-fill: white; /* Texte devient blanc */
+}

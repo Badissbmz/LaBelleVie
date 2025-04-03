@@ -17,7 +17,7 @@ public class Home extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         FirebaseConfig.initializeFirebase(); // Initialize Firebase
-        Parent root = FXMLLoader.load(getClass().getResource("/Menu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/AjouterProduit.fxml"));
         primaryStage.setTitle("Gestion du stock : LaBelleVie");
         primaryStage.setScene(new Scene(root, 875, 500));
         primaryStage.show();

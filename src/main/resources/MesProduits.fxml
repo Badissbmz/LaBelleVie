@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.Controllers.MesProduitsController">
+    <children>
+    <ImageView>
+        <image>
+            <Image url="@Images/mesproduits.png" />
+        </image>
+    </ImageView>
+    <TableView fx:id="produitsTable" layoutX="239.0" layoutY="88.0" prefHeight="284.0" prefWidth="582.0">
+        <columns>
+            <TableColumn fx:id="ColumnId" prefWidth="101.0" text="ID" />
+            <TableColumn fx:id="ColumnNom" prefWidth="123.0" text="Nom" />
+            <TableColumn fx:id="ColumnStatut" prefWidth="112.0" text="Statut" />
+            <TableColumn fx:id="ColumnQuantite" prefWidth="113.0" text="Quantite" />
+            <TableColumn fx:id="ColumnDate" prefWidth="131.0" text="Date" />
+        </columns>
+    </TableView>
+      <Button fx:id="RechercherButton" layoutX="688.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleRechercherButtonAction" prefHeight="25.0" prefWidth="132.0" stylesheets="@ButtonsStyle2.css" text="Rechercher" />
+      <TextField fx:id="RechercheTextField" layoutX="470.0" layoutY="50.0" prefHeight="31.0" prefWidth="213.0" />
+      <Button fx:id="AjouterMesProduitsButton" layoutX="239.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleAjouterProduitButtonAction" prefHeight="25.0" prefWidth="96.0" stylesheets="@ButtonsStyle2.css" text="Ajouter Produit">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="SupprimerMesProduitsButton" layoutX="239.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleSupprimerProduitButtonAction" prefHeight="25.0" prefWidth="96.0" stylesheets="@ButtonsStyle2.css" text="Supprimer Produit">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+      <Button fx:id="StatistiquesMesProduitsButton" layoutX="342.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleStatistiquesButtonAction" prefHeight="25.0" prefWidth="96.0" stylesheets="@ButtonsStyle2.css" text="Statistiques" />
+      <Button fx:id="ModiferMesProduitsButton" layoutX="342.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleModifierButtonAction" prefHeight="25.0" prefWidth="96.0" stylesheets="@ButtonsStyle2.css" text="Modifier Produit">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="PerimesButton" layoutX="465.0" layoutY="384.0" mnemonicParsing="false" onAction="#handlePerimesButtonAction" prefHeight="25.0" prefWidth="96.0" stylesheets="@ButtonsStyle2.css" text="Périmés" />
+      <Button fx:id="AbimesButton" layoutX="465.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleAbimesButtonAction" prefHeight="25.0" prefWidth="96.0" stylesheets="@ButtonsStyle2.css" text="Abimés" />
+      <Button fx:id="TriIdButton" layoutX="567.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleTriIdButtonAction" prefHeight="25.0" prefWidth="96.0" stylesheets="@ButtonsStyle2.css" text="Trier Par Id" />
+      <Button fx:id="TriNomButton" layoutX="567.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleTriNomButtonAction" prefHeight="25.0" prefWidth="96.0" stylesheets="@ButtonsStyle2.css" text="Trier Par Nom" />
+      <Button fx:id="MenuMesProduitsButton" layoutX="720.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleMenuButtonAction" prefHeight="57.0" prefWidth="52.0">
+         <effect>
+            <ImageInput>
+               <source>
+                   <Image url="@Images/iconemenu.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </Button>
+      <Button fx:id="QuitteMesProduitsButton" layoutX="775.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleQuitterButtonAction" prefHeight="57.0" prefWidth="52.0">
+         <effect>
+            <ImageInput>
+               <source>
+                   <Image url="@Images/iconequitter.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </Button>
+      <Button fx:id="OkButton" layoutX="421.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleOkButtonAction" prefHeight="25.0" prefWidth="43.0" stylesheets="@ButtonsStyle2.css" text="OK" />
+      <DatePicker fx:id="DatePickerProduits" layoutX="240.0" layoutY="51.0" prefHeight="29.0" prefWidth="176.0" promptText="Recherche avec date" />
+      <Button fx:id="ActualiserButton" layoutX="93.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleActualiserButtonAction" prefHeight="57.0" prefWidth="52.0" text="Button">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="file:/C:/Users/msi/IdeaProjects/LaBelleVie/src/main/resources/Images/iconeactualiser.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </Button>
+</children>
+        </AnchorPane>

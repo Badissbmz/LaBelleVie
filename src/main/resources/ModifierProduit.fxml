@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.Controllers.ModifierProduitController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="875.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/modifierunproduit.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="303.0" layoutY="102.0" text="ID :">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="303.0" layoutY="184.0" text="Nom :">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="535.0" layoutY="101.0" text="Statut :">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="535.0" layoutY="183.0" text="Quantité :">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="ModifierIdField" layoutX="304.0" layoutY="109.0" prefHeight="35.0" prefWidth="200.0" />
+      <TextField fx:id="ModifierNomField" layoutX="304.0" layoutY="193.0" prefHeight="35.0" prefWidth="200.0" />
+      <TextField fx:id="ModifierQuantiteField" layoutX="535.0" layoutY="193.0" prefHeight="35.0" prefWidth="200.0" />
+      <ComboBox fx:id="ModifierStatusComboBox" layoutX="535.0" layoutY="109.0" prefHeight="35.0" prefWidth="200.0" promptText="Abimé / Périmé" style="-fx-background-color: white;" />
+      <Button fx:id="ModifierButton" layoutX="372.0" layoutY="345.0" onAction="#handleModifierButtonAction" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #007cb2; -fx-text-fill: white;" text="Modifier" />
+      <Button layoutX="541.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleAnnulerButtonAction" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #007cb2; -fx-text-fill: white;" text="Annuler" />
+      <Button fx:id="ConsulterButton" layoutX="371.0" layoutY="383.0" mnemonicParsing="false" onAction="#handleConsulterButtonAction2" prefHeight="25.0" prefWidth="329.0" style="-fx-background-color: #007cb2;" text="Consulter mes produits" textFill="WHITE" />
+      <Button fx:id="QuitterAjouterProduitButton" layoutX="781.0" layoutY="405.0" mnemonicParsing="false" onAction="#handleQuitterButtonAction" prefHeight="50.0" prefWidth="38.0" text="Button">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="@Images/iconequitter.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </Button>
+      <Button fx:id="MenuAjouterProduitButton" layoutX="734.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleMenuButtonAction" prefHeight="50.0" prefWidth="38.0" text="Button">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="@Images/iconemenu.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </Button>
+      <Label layoutX="428.0" layoutY="242.0" text="Date :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="ModifierDatePicker" layoutX="428.0" layoutY="278.0" prefHeight="35.0" prefWidth="200.0" promptText="01/01/2025" />
+   </children>
+</AnchorPane>

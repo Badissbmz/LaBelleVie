@@ -1,0 +1,16 @@
+/* Default button style */
+.button {
+    -fx-background-color: #007cb2;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 4px 10px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: transparent;
+}
+
+/* Button pressed (on click) */
+.button:pressed {
+    -fx-background-color: white;
+    -fx-text-fill: #007cb2;
+}

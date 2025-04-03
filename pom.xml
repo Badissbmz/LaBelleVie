@@ -75,7 +75,41 @@
                     <mainClass>Project.Controllers.Home</mainClass>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>jpackage</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <exec executable="jpackage">
+                                    <arg value="--name"/>
+                                    <arg value="Labellevie"/>
+                                    <arg value="--input"/>
+                                    <arg value="${project.build.directory}"/>
+                                    <arg value="--main-jar"/>
+                                    <arg value="${project.build.finalName}.jar"/>
+                                    <arg value="--main-class"/>
+                                    <arg value="Project.Controllers.Home"/>
+                                    <arg value="--type"/>
+                                    <arg value="app-image"/> <!-- or "msi", "dmg", "deb" etc. -->
+                                    <arg value="--win-shortcut"/> <!-- Windows only -->
+                                    <arg value="--win-menu"/> <!-- Windows only -->
+                                </exec>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
+
     </build>
+
 
 </project>

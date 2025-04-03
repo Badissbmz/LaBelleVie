@@ -17,11 +17,12 @@
 /* Effet au survol */
 .button:hover {
     -fx-background-color: #007cb2;
-      -fx-text-fill: white;/* Rose plus clair */
+      -fx-text-fill: white;
 }
 
 /* Effet au clic */
 .button:pressed {
-    -fx-background-color: white; /* Bleu turquoise */
-    -fx-text-fill: white; /* Texte devient blanc */
+    -fx-background-color: #008cb9;
+    -fx-text-fill: white;
+
 }

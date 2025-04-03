@@ -13,12 +13,11 @@ public class FirebaseConfig {
     public static void initializeFirebase() {
         if (initialized) return; // Prevent multiple initializations
         try {
-            FileInputStream serviceAccount = new FileInputStream("src/main/resources/firebase-config.json");
+            FileInputStream serviceAccount = new FileInputStream("src/main/resources/labellevie-d2217-firebase-adminsdk-fbsvc-8a2a949241.json");
 
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                    .setDatabaseUrl("https://your-project-id.firebaseio.com") // Replace with your database URL
-                    .build();
+                    .setDatabaseUrl("https://labellevie-d2217.firebaseio.com")                    .build();
 
             FirebaseApp.initializeApp(options);
             initialized = true;
